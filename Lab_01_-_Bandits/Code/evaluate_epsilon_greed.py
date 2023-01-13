@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+    #!/usr/bin/env python3
 
 '''
 Created on 14 Jan 2022
@@ -36,7 +36,8 @@ if __name__ == '__main__':
     
     # Q5b:
     # Change values to see what happens
-    epsilon = 0.01
+    # epsilon = 0.01
+    epsilon = 0
     
     agent = EpsilonGreedyAgent(environment, epsilon)
     
