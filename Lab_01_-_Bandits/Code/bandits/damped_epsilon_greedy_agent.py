@@ -30,8 +30,8 @@ class DampedEpsilonGreedyAgent(Agent):
         
         #NOTE:  set rate of Decay
         # NOTE: NOT SURE IF IT IS CORRECT
-        # more negative gives larger decay rate (faster to 0 epsilon)
-        decay = 0
+        # more negative gives higher decay rate (faster to 0 epsilon)
+        decay = -0.05
         return self._epsilon * math.exp(decay * self.total_number_of_pulls)
             
         
