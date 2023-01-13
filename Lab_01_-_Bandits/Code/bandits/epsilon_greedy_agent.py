@@ -24,11 +24,9 @@ class EpsilonGreedyAgent(Agent):
             # explore
             action = action_space.sample()
         else:
-            # exploit
-            # get the current max
-            # NOTE: IDK
-            max_action, _ = self._environment.optimal_action()
-            action = max_action
+            average_q = np.divide(self.total_reward, self.number_of_pulls)
+            best_action = np.where(average_q == np.amax(average_q))[0]
+            action = best_action[0]
 
         return action
             
